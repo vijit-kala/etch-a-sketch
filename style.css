@@ -2,6 +2,19 @@
   --visited-color: green;
 }
 
+.container {
+  text-align: center;
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#color-picker {
+  margin-top: 5px;
+}
+
 #grid-container {
   display: flex;
   max-width: 400px;
@@ -17,4 +30,5 @@
 
 .visited {
   background-color: var(--visited-color);
+  color: var(--visited-color);
 }

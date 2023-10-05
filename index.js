@@ -1,4 +1,6 @@
 const gridContainer = document.querySelector('#grid-container');
+const resetButton = document.querySelector('#reset-button');
+const colorPicker = document.querySelector('#color-picker');
 
 const generateGrid = (rows) => {
   for (let i = 0; i < rows; i++) {
@@ -25,8 +27,15 @@ console.log(gridItems);
 
 gridItems.forEach((gridItem) => {
   // console.log(gridItem);
-  gridItem.addEventListener('mousedown', () => {
+  gridItem.addEventListener('mouseover', () => {
     gridItem.classList.add('visited');
     console.log(gridItem.classList);
   });
+});
+
+resetButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  gridItems.forEach((gridItem) => gridItem.classList.remove('visited'));
+  // alert('App reset');
+  // generateGrid(16);
 });
